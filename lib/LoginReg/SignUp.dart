@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:insuranceapp/LoginReg/LogIn.dart';
 import 'package:insuranceapp/utilities/constants.dart';
+import 'package:insuranceapp/Home/Sidebar.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -353,7 +354,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () => print('Sign Up Button Pressed'),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
+        },
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
@@ -427,6 +433,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+                      SizedBox(
+                        height: 100.0,
+                        child: Image.asset(
+                          "assets/logo.jpg",
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
                       Text(
                         'Register',
                         style: TextStyle(

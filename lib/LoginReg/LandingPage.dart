@@ -9,13 +9,24 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final alucard = Hero(
       tag: 'hero',
-      child: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: SizedBox(
-          height: 50.0,
-          decorat: Colors.transparent,
-          backgroundImage: AssetImage('assets/logo.jpg'),
-        ),
+      child: Container(
+          color: Colors.transparent,
+          child: Padding(
+            padding: const EdgeInsets.all(36.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+              SizedBox(
+              height: 100.0,
+              child: Image.asset(
+                "assets/logo.jpg",
+                fit: BoxFit.contain,
+              ),
+            ),
+            ],
+          ),
+          ),
       ),
     );
 
