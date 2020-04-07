@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:insuranceapp/LoginReg/LogIn.dart';
 import 'package:insuranceapp/utilities/constants.dart';
-import 'package:insuranceapp/Home/Sidebar.dart';
+import 'package:insuranceapp/Home1/Homepage.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -11,8 +11,6 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   bool _rememberMe = false;
-  String dropdownValue1 = 'Model';
-  String dropdownValue2 = 'Year of Manufacture';
 
   Widget _buildNameTF() {
     return Column(
@@ -189,137 +187,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  Widget _buildVehicleDetailsTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Vehicle Details',
-          style: TextStyle(
-            color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'OpenSans',
-            fontSize: 16.0
-          ),
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.center,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: new Theme(
-            data: Theme.of(context).copyWith(
-              canvasColor: Colors.grey,
-            ),
-            child: DropdownButtonHideUnderline(
-              child: new DropdownButton(
-                value: dropdownValue1,
-                style: TextStyle(
-                  fontFamily: 'OpenSans',
-                ),
-                onChanged: (String newValue) {
-                  setState(() {
-                    dropdownValue1 = newValue;
-                  });
-                },
-                items: <String>['Model', 'Toyota', 'BMW', 'Ferrari']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(
-                      value,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
-                        fontFamily: 'OpenSans',
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildYearDetailsTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.center,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: new Theme(
-            data: Theme.of(context).copyWith(
-              canvasColor: Colors.grey,
-            ),
-            child: DropdownButtonHideUnderline(
-              child: new DropdownButton(
-                value: dropdownValue2,
-                style: TextStyle(
-                  fontFamily: 'OpenSans',
-                ),
-                onChanged: (String newValue) {
-                  setState(() {
-                    dropdownValue2 = newValue;
-                  });
-                },
-                items: <String>['Year of Manufacture','2001', ' 2002', '2003', '2020']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(
-                      value,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
-                        fontFamily: 'OpenSans',
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildRegNoTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-       SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-            keyboardType: TextInputType.text,
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'OpenSans',
-            ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.directions_car,
-                color: Colors.white,
-              ),
-              hintText: 'Registration Number',
-              hintStyle: kHintTextStyle,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
 
   Widget _buildRememberMeCheckbox() {
     return Container(
@@ -468,12 +335,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 30.0,
                       ),
                       _buildConfirmPasswordTF(),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      _buildVehicleDetailsTF(),
-                      _buildYearDetailsTF(),
-                      _buildRegNoTF(),
                       SizedBox(
                         height: 30.0,
                       ),

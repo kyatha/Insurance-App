@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:insuranceapp/utilities/constants.dart';
 import 'SignUp.dart';
-import 'package:insuranceapp/Home/Sidebar.dart';
+//import 'package:insuranceapp/Home/Sidebar.dart';
+import 'package:insuranceapp/Home1/Homepage.dart';
+
 
 class LoginScreen extends StatefulWidget {
   @override
