@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insuranceapp/Screens/insurance.dart';
+import 'package:insuranceapp/Screens/coverTypes.dart';
 import 'package:insuranceapp/Screens/renew.dart';
 import 'package:insuranceapp/Screens/rescue.dart';
 import 'package:insuranceapp/Screens/report.dart';
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return new MaterialApp(
       theme: new ThemeData(
           primaryColor: Colors.teal, fontFamily: 'Raleway'),
-      home: new ListPage(title: 'Our Services'),
+      home: new ListPage(title: ('Select Service')),
       // home: DetailPage(),
     );
   }
@@ -41,7 +41,7 @@ class _ListPageState extends State<ListPage> {
 // replace this function with the code in the examples
 Widget _myListView(BuildContext context) {
   return Scaffold(
-    backgroundColor: Colors.teal,
+    backgroundColor: Color(0xff392850),
     appBar: topAppBar,
     body: ListView(
     children: <Widget>[
@@ -60,7 +60,7 @@ Widget _myListView(BuildContext context) {
                   border: new Border(
                       right: new BorderSide(
                           width: 1.0, color: Colors.white24))),
-              child: Icon(Icons.autorenew, color: Colors.white),
+              child: Icon(Icons.attach_money, color: Colors.white),
             ),
             title: Text(
               "Buy Insurance",
@@ -75,7 +75,7 @@ Widget _myListView(BuildContext context) {
                   flex: 4,
                   child: Padding(
                       padding: EdgeInsets.only(left: 10.0),
-                      child: Text("New customers",
+                      child: Text("New and existing customers",
                           style: TextStyle(color: Colors.white))),
                 )
               ],
@@ -85,7 +85,7 @@ Widget _myListView(BuildContext context) {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => get_insurance()),
+                MaterialPageRoute(builder: (context) => coverTypes()),
               );
             },
           ),
@@ -106,7 +106,7 @@ Widget _myListView(BuildContext context) {
                   border: new Border(
                       right: new BorderSide(
                           width: 1.0, color: Colors.white24))),
-              child: Icon(Icons.autorenew, color: Colors.white),
+              child: Icon(Icons.warning, color: Colors.white),
             ),
             title: Text(
               "Report Accident",
@@ -121,7 +121,7 @@ Widget _myListView(BuildContext context) {
                   flex: 4,
                   child: Padding(
                       padding: EdgeInsets.only(left: 10.0),
-                      child: Text("For existing insurance holders",
+                      child: Text("For everyone",
                           style: TextStyle(color: Colors.white))),
                 )
               ],
@@ -199,7 +199,7 @@ Widget _myListView(BuildContext context) {
                   border: new Border(
                       right: new BorderSide(
                           width: 1.0, color: Colors.white24))),
-              child: Icon(Icons.autorenew, color: Colors.white),
+              child: Icon(Icons.local_hospital, color: Colors.white),
             ),
             title: Text(
               "Rescue services near me",
@@ -264,9 +264,10 @@ Widget _myListView(BuildContext context) {
   );
 }
   final topAppBar = AppBar(
-    elevation: 0.1,
+    elevation: 1,
     backgroundColor: Colors.teal,
-    title: Text('Our Services'),
+    title: Text('Select Service'),
+    centerTitle: true,
     actions: <Widget>[
       IconButton(
         icon: Icon(Icons.list),

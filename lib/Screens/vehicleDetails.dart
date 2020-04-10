@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class vehicleDetails extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
@@ -242,11 +240,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 children: <Widget>[
                   _buildCarDetails(),
-                  SizedBox(height: 100),
+                  SizedBox(height: 30),
                   RaisedButton(
                     child: Text(
                       'Submit',
-                      style: TextStyle(color: Colors.lightBlueAccent, fontSize: 12),
+                      style: TextStyle(color: Colors.green, fontSize: 12),
                     ),
                     onPressed: (){
                       if(_formKey.currentState.validate()){

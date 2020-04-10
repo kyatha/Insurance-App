@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:insuranceapp/LoginReg/LogIn.dart';
 import 'package:insuranceapp/utilities/constants.dart';
 import 'package:insuranceapp/Home1/Homepage.dart';
+import 'package:insuranceapp/Home1/dashBoard.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -224,7 +225,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HomePage()),
+            MaterialPageRoute(builder: (context) => Dashboard()),
           );
         },
         padding: EdgeInsets.all(15.0),
