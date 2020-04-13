@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:insuranceapp/Screens/companyProfiles.dart';
 import 'package:insuranceapp/Screens/coverTypes.dart';
 import 'package:insuranceapp/Screens/renew.dart';
 import 'package:insuranceapp/Screens/rescue.dart';
 import 'package:insuranceapp/Screens/report.dart';
 import 'package:insuranceapp/Screens/User Profile.dart';
+import 'package:insuranceapp/Screens/companyProfiles.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -85,7 +87,7 @@ Widget _myListView(BuildContext context) {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => coverTypes()),
+                MaterialPageRoute(builder: (context) => CompanyProfiles()),
               );
             },
           ),
