@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/Screens/Insurance/insurance.dart
 import 'package:insuranceapp/Screens/Insurance/Motor_insurance.dart';
+=======
+import 'package:insuranceapp/Screens/motoCovers.dart';
+import 'package:insuranceapp/Screens/availableCovers.dart';
+import 'package:insuranceapp/Screens/premiumCalculator.dart';
+>>>>>>> github/master:lib/Screens/coverTypes.dart
 
 class get_insurance extends StatelessWidget {
   @override
@@ -31,7 +37,11 @@ Widget _myListView(BuildContext context) {
         onTap: () {
           Navigator.push(
             context,
+<<<<<<< HEAD:lib/Screens/Insurance/insurance.dart
             MaterialPageRoute(builder: (context) => motor_insurance()),
+=======
+            MaterialPageRoute(builder: (context) => PremiumCalculator()),
+>>>>>>> github/master:lib/Screens/coverTypes.dart
           );
         },
       ),

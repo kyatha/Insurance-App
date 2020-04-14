@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+
 import 'package:insuranceapp/Screens/Insurance/insurance.dart';
 
 import 'package:insuranceapp/Screens/Renew/renew.dart';
 import 'package:insuranceapp/Screens/rescue.dart';
 import 'package:insuranceapp/Screens/Accident/report.dart';
+
+import 'package:insuranceapp/Screens/companyProfiles.dart';
+
+import 'package:insuranceapp/Screens/Renew/renew.dart';
+import 'package:insuranceapp/Screens/rescue.dart';
+import 'package:insuranceapp/Screens/Accident/report.dart';
+import 'package:insuranceapp/Screens/User Profile.dart';
+import 'package:insuranceapp/Screens/companyProfiles.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -61,7 +70,9 @@ Widget _myListView(BuildContext context) {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => get_insurance()),
+               MaterialPageRoute(builder: (context) => get_insurance()),
+
+
               );
             },
             child: Center(child: Column(
